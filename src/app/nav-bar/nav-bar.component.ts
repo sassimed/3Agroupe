@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import  {GroupService} from '../Service/group.service';
 
 
+
 @Component({
   selector: 'app-nav-bar',
   templateUrl: './nav-bar.component.html',
@@ -9,7 +10,7 @@ import  {GroupService} from '../Service/group.service';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private GroupService : GroupService) { }
+  constructor(private GroupService : GroupService ) { }
 
   groups = [];
 

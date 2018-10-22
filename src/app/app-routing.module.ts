@@ -8,11 +8,11 @@ import { GroupComponent } from './group/group.component';
 
 const routes: Routes = [
     {
-        path: 'home',
+        path: '',
         component: HomeComponent
     },
     {
-        path: 'test',
+        path: 'group',
         component: GroupComponent
     }
 ];
