@@ -1,15 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy  } from '@angular/core';
+import  {GroupService} from '../../Service/group.service';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+
 
 @Component({
   selector: 'app-info',
   templateUrl: './info.component.html',
   styleUrls: ['./info.component.css']
 })
-export class InfoComponent implements OnInit {
+export class InfoComponent implements OnInit, OnDestroy  {
 
-  constructor() { }
+	groups = [];
+	group = {};
+   id : number ;
+  private sub: any;
+
+  constructor(private GroupService : GroupService ,  private route: ActivatedRoute) { }
 
   ngOnInit() {
+  	this.groups = this.GroupService.groups;
+    this.sub = this.route.params.subscribe(params => {
+       this.id = +params['id']; // (+) converts string 'id' to a number
+
+       this.groups.forEach( (group) => {
+       if (group.id == this.id) {
+      this.group = group ;
+       }
+      });
+    });
+
+
   }
+
+  ngOnDestroy() {
+    this.sub.unsubscribe();
+  }
+
+
 
 }

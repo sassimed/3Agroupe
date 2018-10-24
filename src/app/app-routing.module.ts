@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes , ParamMap , ActivatedRoute} from '@angular/router';
 import {APP_BASE_HREF} from '@angular/common';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { GroupComponent } from './group/group.component';
+
 
 const routes: Routes = [
     {
@@ -12,7 +13,7 @@ const routes: Routes = [
         component: HomeComponent
     },
     {
-        path: 'group',
+        path: 'group/:id',
         component: GroupComponent
     }
 ];

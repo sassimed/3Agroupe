@@ -2,21 +2,21 @@
     <div class="container-fluid"  >
 
       <div id="logo" class="pull-left" >
-         <h1><a href="#intro" class="scrollto">3AGroupe</a></h1> 
+         <h1><a routerLink="/" href="#intro" class="scrollto">3AGroupe</a></h1> 
         <!-- Uncomment below if you prefer to use an image logo -->
        <!--  <a href="#intro"><img src="img/3a/logo.png" alt="" title="" /></a> -->
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li class="menu-active"><a  href="#intro">Home</a></li>
           <li><a href="#about">A PROPOS</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#portfolio">Portfeuille</a></li>
           <li><a href="#team">Equipe</a></li>
-          <li class="menu-has-children"><a href="">Groupes</a>
+          <li class="menu-has-children"><a>Groupes</a>
             <ul>
-              <li *ngFor = "let group of groups"><a href="#">{{group.name}}</a></li>
+              <li  *ngFor = "let group of groups"><a  routerLink="group/{{group.id}}">{{group.name}}</a></li>
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>

@@ -29,7 +29,6 @@
               "node_modules/jquery/jquery.min.js",
               "node_modules/jquery/jquery-migrate.min.js",
               "node_modules/lightbox/js/lightbox.min.js",
-              "node_modules/owlcarousel/owl.carousel.min.js",
               "node_modules/bootstrap/js/bootstrap.bundle.min.js",
               "node_modules/easing/easing.min.js",
               "node_modules/superfish/hoverIntent.js",
@@ -39,6 +38,7 @@
               "node_modules/counterup/counterup.min.js",
               "node_modules//isotope/isotope.pkgd.min.js",
               "node_modules/touchSwipe/jquery.touchSwipe.min.js",
+              "node_modules/owlcarousel/owl.carousel.min.js",
               "src/js/main.js",
               "contactform/contactform.js"
             ]
