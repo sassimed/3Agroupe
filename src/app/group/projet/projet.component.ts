@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import  {GroupService} from '../../Service/group.service';
+import { first } from 'rxjs/operators';
+import { Group } from '../../Model/group';
 
 @Component({
   selector: 'app-projet',
@@ -8,13 +10,18 @@ import  {GroupService} from '../../Service/group.service';
 })
 export class ProjetComponent implements OnInit {
 
-  groups = [];
-  group = {};
-
+  group: Group ;
+  groups: Group[] = [];
+  
   constructor(private GroupService : GroupService) { }
 
   ngOnInit() {
-  	this.groups = this.GroupService.groups;
+  	this.GroupService.groupUpdated.subscribe( (lang) => {
+        this.groups = this.GroupService.getGroups();
+        }
+      );
   }
+
+ 
 
 }

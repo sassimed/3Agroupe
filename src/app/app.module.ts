@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -19,6 +20,7 @@ import { GroupComponent } from './group/group.component';
 import { LogoComponent } from './group/logo/logo.component';
 import { ProjetComponent } from './group/projet/projet.component';
 import { InfoComponent } from './group/info/info.component';
+import { AppGlobals } from './ app.global';
 
 @NgModule({
   declarations: [
@@ -42,9 +44,12 @@ import { InfoComponent } from './group/info/info.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    AppGlobals
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

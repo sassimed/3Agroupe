@@ -1,5 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , Input , OnChanges, SimpleChanges} from '@angular/core';
+import { first } from 'rxjs/operators';
 import  {GroupService} from '../Service/group.service';
+import { Group } from '../Model/group';
+import { Subject } from 'rxjs';
 
 
 
@@ -12,10 +15,18 @@ export class NavBarComponent implements OnInit {
 
   constructor(private GroupService : GroupService ) { }
 
-  groups = [];
+  groups: Group[] = [];
 
+    
   ngOnInit() {
-  	this.groups = this.GroupService.groups;
+    this.GroupService.groupUpdated.subscribe(
+    (lang) => {
+        this.groups = this.GroupService.getGroups();
+        }
+    );
+      
   }
+
+  
 
 }

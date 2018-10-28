@@ -1,6 +1,9 @@
 import { Component, OnInit , OnDestroy } from '@angular/core';
 import  {GroupService} from '../../Service/group.service';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import { first } from 'rxjs/operators';
+import { Group } from '../../Model/group';
+import { AppGlobals } from '../../ app.global';
 
 
 @Component({
@@ -10,22 +13,25 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 })
 export class LogoComponent implements OnInit , OnDestroy{
 
-	groups = [];
-	group = {};
+	group: Group ;
+ // groups: Group[] = [];
   id : number ;
   private sub: any;
 
-  constructor(private GroupService : GroupService ,  private route: ActivatedRoute) { }
+  constructor(private GroupService : GroupService ,  private route: ActivatedRoute, private app: AppGlobals) { }
 
   ngOnInit() {
-  	this.groups = this.GroupService.groups;
-  	this.sub = this.route.params.subscribe(params => {
-       this.id = +params['id']; // (+) converts string 'id' to a number
+/*  	this.GroupService.groupUpdated.subscribe( (lang) => {
+        this.groups = this.GroupService.getGroups();
+        }
+      );  */
 
-       this.groups.forEach( (group) => {
-       if (group.id == this.id) {
-      this.group = group ;
-       }
+  	this.sub = this.route.params.subscribe(params => {
+      this.id = +params['id']; // (+) converts string 'id' to a number
+      this.GroupService.groups.forEach( (group) => {
+         if (group.id == this.id) {
+            this.group = group ;
+         }
       });
     });
 
@@ -35,5 +41,6 @@ export class LogoComponent implements OnInit , OnDestroy{
   ngOnDestroy() {
     this.sub.unsubscribe();
   }
+
 
 }

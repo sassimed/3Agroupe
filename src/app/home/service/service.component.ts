@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import  {GroupService} from '../../Service/group.service';
+import { first } from 'rxjs/operators';
+import { Group } from '../../Model/group';
+import { AppGlobals } from '../../ app.global';
 
 @Component({
   selector: 'app-service',
@@ -8,12 +11,16 @@ import  {GroupService} from '../../Service/group.service';
 })
 export class ServiceComponent implements OnInit {
 
-  constructor(private GroupService : GroupService) { }
+  constructor(private GroupService : GroupService , private app : AppGlobals) { }
 
-  groups = [];
+  groups: Group[] = [];
 
   ngOnInit() {
-  	this.groups = this.GroupService.groups;
+  	  this.GroupService.groupUpdated.subscribe( (lang) => {
+        this.groups = this.GroupService.getGroups();
+        }
+      );
   }
+
 
 }
