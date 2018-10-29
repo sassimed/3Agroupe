@@ -21,6 +21,9 @@ import { LogoComponent } from './group/logo/logo.component';
 import { ProjetComponent } from './group/projet/projet.component';
 import { InfoComponent } from './group/info/info.component';
 import { AppGlobals } from './ app.global';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -45,10 +48,15 @@ import { AppGlobals } from './ app.global';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AgmCoreModule.forRoot({apiKey: ''}),
+    FormsModule,
+    NgbModule.forRoot()
+
   ],
   providers: [
-    AppGlobals
+    AppGlobals,
+    GoogleMapsAPIWrapper
   ],
   bootstrap: [AppComponent]
 })
