@@ -18,7 +18,7 @@ export class LogoComponent implements OnInit , OnDestroy{
   id : number ;
   private sub: any;
 
-  constructor(private GroupService : GroupService ,  private route: ActivatedRoute, private app: AppGlobals) { }
+  constructor(private GroupService : GroupService ,  private route: ActivatedRoute, public app: AppGlobals) { }
 
   ngOnInit() {
 /*  	this.GroupService.groupUpdated.subscribe( (lang) => {
