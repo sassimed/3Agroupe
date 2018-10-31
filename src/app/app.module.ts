@@ -24,6 +24,8 @@ import { AppGlobals } from './ app.global';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 import { FormsModule } from '@angular/forms';
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { FormsModule } from '@angular/forms';
     TestimonialComponent,
     LogoComponent,
     ProjetComponent,
-    InfoComponent
+    InfoComponent,
+    AdminComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

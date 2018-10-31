@@ -5,7 +5,8 @@ import {APP_BASE_HREF} from '@angular/common';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { GroupComponent } from './group/group.component';
-
+import { AdminComponent } from './admin/admin.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
     {
@@ -15,6 +16,14 @@ const routes: Routes = [
     {
         path: 'group/:id',
         component: GroupComponent
+    },
+    {
+        path: 'admin',
+        component: AdminComponent
+    },
+    {
+        path: 'login',
+        component: LoginComponent
     }
 ];
 
