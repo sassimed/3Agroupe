@@ -14,6 +14,7 @@ export class AdminService {
 
   loggedUpdated = new EventEmitter();
 
+
   getLogged() {
   	return this.logged;
   }
