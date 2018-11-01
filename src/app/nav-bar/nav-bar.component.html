@@ -20,7 +20,8 @@
             </ul>
           </li>
           <li><a href="#contact">Contact</a></li>
-          <li><a routerLink="login">Connexion</a></li>
+          <li *ngIf= "!logged"><a routerLink="login">Connexion</a></li>
+          <li *ngIf = "logged"><a routerLink="admin">Admin</a></li>
         </ul>
       </nav><!-- #nav-menu-container   -->
     </div>

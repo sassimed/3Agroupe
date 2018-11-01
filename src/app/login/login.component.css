@@ -4,8 +4,14 @@
   background-size: cover;
   padding: 60px 0 0 0;
   position: relative;
+}
+
+@media only screen and (min-width:768px){
+  #login {
   width : 1299px;
   height: 538px;
+  }
+
 }
 
 
@@ -22,12 +28,24 @@
   height: 50px;
   line-height: 50px;
 }
+
+@media (min-width:768px){
 #login .main-div {
   background: #ffffff none repeat scroll 0 0;
   border-radius: 2px;
-  margin: 10px auto 30px;
-  max-width: 38%;
+  margin: 40px auto 30px;
   padding: 50px 70px 70px 71px;
+  }
+}
+
+@media (max-width:768px){
+  #login .main-div {
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 2px;
+  margin: 20px auto 30px;
+  padding: 20px 99px 20px 71px;
+}
+
 }
 
 #login .login-form .form-group {
