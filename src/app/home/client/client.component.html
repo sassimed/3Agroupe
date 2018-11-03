@@ -5,7 +5,8 @@
           <h3>Nos Clients</h3>
         </header>
 
-        <div class="owl-carousel clients-carousel" >
+        <owl-carousel [options]="{navigation: true, autoplay: true, autoplayTimeout : 2000}">
+
           <!--  <img *ngFor= "let client of clients " src="{{client.path}}" > -->
             <img src="assets/img/clients/client-1.png" > 
             <img src="assets/img/clients/client-2.png" > 
@@ -15,7 +16,7 @@
             <img src="assets/img/clients/client-6.png" > 
             <img src="assets/img/clients/client-7.png" > 
             <img src="assets/img/clients/client-8.png" > 
-        </div>
+        </owl-carousel>
 
       </div>
  </section>

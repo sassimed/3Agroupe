@@ -16,10 +16,17 @@ export class ServiceComponent implements OnInit {
   groups: Group[] = [];
 
   ngOnInit() {
+
+      this.groups = this.GroupService.getGroups();
+
+
   	  this.GroupService.groupUpdated.subscribe( (lang) => {
         this.groups = this.GroupService.getGroups();
+        console.log(this.groups);
         }
       );
+
+ 
   }
 
 

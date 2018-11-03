@@ -6,7 +6,8 @@
 @import "~lightbox/css/lightbox.min.css";
 @import "~fontawesome-free/css/all.min.css";
 @import "~font-awesome/css/font-awesome.min.css";
-@import "~owlcarousel/assets/owl.carousel.min.css";
+@import "~owl.carousel/dist/assets/owl.carousel.min.css";
+@import "~owl.carousel/dist/assets/owl.theme.default.min.css";
 
 body {
   background: #fff;

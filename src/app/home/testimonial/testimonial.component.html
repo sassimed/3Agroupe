@@ -5,7 +5,8 @@
           <h3>Témoignages</h3>
         </header>
 
-        <div class="owl-carousel testimonials-carousel">
+        <owl-carousel [options]="{items: 1, dots: true, navigation: true, autoplay: true, autoplayTimeout : 3000}">
+      
           
        <!--   <div class="testimonial-item" *ngFor = "let testimonial of testimonials">
             <img src="{{testimonial.path}}" class="testimonial-img" alt="">
@@ -40,6 +41,7 @@
             </p>
           </div>
 
+
            <div class="testimonial-item" >
             <img src="assets/img/testimonial-3.jpg" class="testimonial-img" alt="">
             <h3>Jena Karlis</h3>
@@ -52,7 +54,8 @@
           </div>
 
 
-        </div>
+
+        </owl-carousel>
 
       </div>
     </section>

@@ -38,7 +38,7 @@
               "node_modules/counterup/counterup.min.js",
               "node_modules//isotope/isotope.pkgd.min.js",
               "node_modules/touchSwipe/jquery.touchSwipe.min.js",
-              "node_modules/owlcarousel/owl.carousel.min.js",
+              "node_modules/owl.carousel/dist/owl.carousel.min.js",
               "src/js/main.js",
               "contactform/contactform.js"
             ]

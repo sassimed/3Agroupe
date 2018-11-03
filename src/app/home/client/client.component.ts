@@ -13,7 +13,8 @@ export class ClientComponent implements OnInit {
   clients = [];
 
   ngOnInit() {
-  	this.clients = this.clientService.clients;
+  	console.log("test client component");
+  	//this.clients = this.clientService.clients;
   }
 
 }

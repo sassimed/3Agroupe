@@ -13,6 +13,8 @@ export class IntroComponent implements OnInit {
   img = "img/intro-carousel/2.jpg" ;
 
   ngOnInit() {
+
+  
   }
 
 }
