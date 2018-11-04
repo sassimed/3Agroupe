@@ -14,6 +14,7 @@ import {
 import {MatCheckboxModule} from '@angular/material'
 import {MatDialogModule, MatDialog, MatDialogRef } from '@angular/material/dialog';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ng6-toastr-notifications';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -36,7 +37,7 @@ import { InfoComponent } from './group/info/info.component';
 import { AppGlobals } from './ app.global';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
 import { AddserviceComponent } from './home/service/addservice/addservice.component';
@@ -71,12 +72,19 @@ import { AddserviceComponent } from './home/service/addservice/addservice.compon
     AppRoutingModule,
     AgmCoreModule.forRoot({apiKey: ''}),
     FormsModule,
+    ReactiveFormsModule,
     NgbModule.forRoot(),
     OwlModule,
     MatDialogModule,
-    BrowserAnimationsModule
-
-
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatInputModule,
+    MatCheckboxModule
   ],
   entryComponents: [
     AddserviceComponent

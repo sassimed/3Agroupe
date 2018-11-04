@@ -1,10 +1,12 @@
 export class Group {
     id: number;
-    name: string;
-    description: string;
-    gerant: string;
-    emailGerant: string;
-    logo: string;
-    telephone: string;
-    address: string;
+     constructor(
+        public name: string,
+      //  public description: string,
+        public gerant: string,
+        public emailGerant: string,
+     //   public logo: string,
+        public telephone: string,
+        public address: string
+      ) {  }
 }

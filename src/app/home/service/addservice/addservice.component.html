@@ -1,0 +1,38 @@
+<form [formGroup]="form" (ngSubmit)="submit(form)">
+  <h2 mat-dialog-title>Ajouter un groupe</h2>
+  <mat-dialog-content>
+    <mat-form-field>
+      <input matInput formControlName="name" placeholder="nom">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="description" placeholder="description">
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput formControlName="gerant" placeholder="gerant">
+    </mat-form-field>
+    <br>
+     <mat-form-field>
+      <input matInput formControlName="logo" placeholder="logo">
+    </mat-form-field>
+    <br>
+      <mat-form-field>
+      <input matInput formControlName="adresse" placeholder="adresse">
+    </mat-form-field>
+    <br>
+    <mat-form-field hintLabel="{{errorPhone()}}">
+      <input matInput #phone formControlName="phone" placeholder="telephone">
+    </mat-form-field>
+    <br>
+    <mat-form-field hintLabel="{{errorMail()}}">
+      <input matInput #mail type="email" formControlName="email" placeholder="email gerant">
+    </mat-form-field>
+    <br>
+
+  </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button type="submit">Ajouter</button>
+    <button mat-button type="button" mat-dialog-close>Annuler</button>
+  </mat-dialog-actions>
+</form>
