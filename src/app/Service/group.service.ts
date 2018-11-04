@@ -18,6 +18,18 @@ export class GroupService {
        return this.http.get<Group[]>(`${this.app.baseAPIUrl}/compagnie` );
     }
 
+   addGroup(group : Group) {
+     return this.http.post(`${this.app.baseAPIUrl}/compagnie` , group);
+   }
+
+   updateGroup(id : number , group : Group ) {
+     return this.http.put(`${this.app.baseAPIUrl}/compagnie` , group);
+   }
+
+   deleteGroup(id: number) {
+     return this.http.delete(`${this.app.baseAPIUrl}/compagnie` + id);
+   }
+
    groups: Group[] = [];
 
    groupUpdated = new EventEmitter();

@@ -4,6 +4,10 @@
         <header class="section-header wow fadeInUp">
           <h3>Services</h3>
           <p>Nos secteur d'activités</p>
+      <!--    <div class = "add" *ngIf = "logged"> -->
+          <div class = "add">
+            <button type="button" class="btn btn-success" (click)="openDialog()" >Ajouter</button>
+          </div> 
         </header>
 
         <div class="row about-cols">
@@ -16,8 +20,12 @@
               </div>
               <h2 class="title"><a href="#">{{group.name}}</a></h2>
               <p>
-                {{group.text}}
+                {{group.description}}
               </p>
+              <div *ngIf = "logged">
+              <button type="button" class="btn btn-secondary">Modifier</button>
+              <button type="button" class="btn btn-danger">Supprimer</button>
+              </div>
             </div>
           </div>
 

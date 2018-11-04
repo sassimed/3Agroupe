@@ -2,6 +2,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { OwlModule } from 'ngx-owl-carousel';
+import {
+    MatButtonModule,
+    MatIconModule,
+    MatListModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatInputModule
+} from '@angular/material';
+
+import {MatCheckboxModule} from '@angular/material'
+import {MatDialogModule, MatDialog, MatDialogRef } from '@angular/material/dialog';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
@@ -27,6 +39,7 @@ import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
 import { FormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { LoginComponent } from './login/login.component';
+import { AddserviceComponent } from './home/service/addservice/addservice.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +61,9 @@ import { LoginComponent } from './login/login.component';
     ProjetComponent,
     InfoComponent,
     AdminComponent,
-    LoginComponent
+    LoginComponent,
+    AddserviceComponent
+ 
   ],
   imports: [
     BrowserModule,
@@ -57,8 +72,14 @@ import { LoginComponent } from './login/login.component';
     AgmCoreModule.forRoot({apiKey: ''}),
     FormsModule,
     NgbModule.forRoot(),
-    OwlModule
+    OwlModule,
+    MatDialogModule,
+    BrowserAnimationsModule
 
+
+  ],
+  entryComponents: [
+    AddserviceComponent
   ],
   providers: [
     AppGlobals,

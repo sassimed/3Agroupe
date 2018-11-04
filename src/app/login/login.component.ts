@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     if(f.value.inputUsername == this.AdminService.login && f.value.inputUsername == this.AdminService.pwd ) {
     	//console.log(f.valid);
     	this.AdminService.setLogged(true);
-      this.router.navigate(['admin']);
+      this.router.navigate(['']);
       
     }
      

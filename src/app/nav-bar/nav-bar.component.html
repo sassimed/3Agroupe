@@ -1,4 +1,4 @@
-<div *ngIf= "!logged">
+
  <header id="header">
     <div class="container-fluid"  >
 
@@ -22,10 +22,9 @@
           </li>
           <li><a href="#contact">Contact</a></li>
           <li *ngIf= "!logged"><a routerLink="login">Connexion</a></li>
-          <li *ngIf = "logged"><a routerLink="admin">Admin</a></li>
+          <li *ngIf = "logged"><a >Admin</a></li>
         </ul>
       </nav><!-- #nav-menu-container   -->
     </div>
 
   </header> <!-- #header -->
-</div>
